@@ -12,6 +12,7 @@ response = requests.get(url)
 # trasnformando html em formato legivel para o python
 if response.status_code == 200:
     soup = BeautifulSoup(response.text, 'html.parser')
+    
 # encontrando os links
     pdf_links = []
     for link in soup.find_all('a', href=True):
@@ -24,6 +25,7 @@ if response.status_code == 200:
             print("PDF encontrado:", pdf)
     else:
         print("Nenhum PDF encontrado.")
+
 # extraindo o nome e baixando os pdfs
     for pdf_url in pdf_links:
         pdf_name = pdf_url.split("/")[-1]
@@ -38,6 +40,7 @@ if response.status_code == 200:
             print(f"Download concluido: {pdf_name}")
         else:
             print(f"Erro ao baixar {pdf_url}")
+
 # compactando os arquivos
     zip_name = "pdfs_compactados"
     folder_path = "pdfs_anexo"
