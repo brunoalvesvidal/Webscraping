@@ -5,6 +5,7 @@ import zipfile
 
 pdf_path = "pdfs_anexo/Anexo_I_Rol_2021RN_465.2021_RN627L.2024.pdf"
 
+# Extraindo os dados do pdf
 tabelas = []
 
 with pdfplumber.open(pdf_path) as pdf:
@@ -24,7 +25,7 @@ for tabela in tabelas:
 colunas = todas_linhas[0]
 dados = todas_linhas[1:]
 
-
+# DataFrame com o resultado
 df = pd.DataFrame(dados, columns=colunas)
 print(df.head())
 
