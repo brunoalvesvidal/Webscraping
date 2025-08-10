@@ -4,9 +4,9 @@ Este projeto é parte de um teste técnico para processo seletivo de estágio. E
 
 ---
 
-## ✅ Tarefas realizadas
+##  Tarefas realizadas
 
-### 🧩 1. Extração de arquivos PDF
+###  1. Extração de arquivos PDF
 
 - Os anexos em PDF foram localizados na página oficial da ANS:
   https://www.gov.br/ans/pt-br/acesso-a-informacao/participacao-da-sociedade/atualizacao-do-rol-de-procedimentos
@@ -15,7 +15,7 @@ Este projeto é parte de um teste técnico para processo seletivo de estágio. E
 
 ---
 
-### 🔄 2. Transformação de Dados
+###  2. Transformação de Dados
 
 #### 2.1 Extração dos dados do Anexo I
 - Utilizei `pdfplumber` para extrair todas as páginas do PDF do Anexo I.
